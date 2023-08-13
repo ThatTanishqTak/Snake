@@ -11,9 +11,13 @@ public:
 	void update();
 	void render();
 
+	Rectangle player;
+
 private:
 	void initTextures();
 	void initVariables();
+
+	Vector2 playerPos, playerSpeed;
 
 	void unload();
 };
