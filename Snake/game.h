@@ -2,8 +2,10 @@
 
 #include "raylib.h"
 #include "player.h"
+#include "coins.h"
 
 class Player;
+class Coins;
 
 class Game
 {
@@ -17,6 +19,7 @@ public:
 
 private:
 	Player* play_obj;
+	Coins* coin_obj;
 
 	void initTextures();
 	void initVariables();

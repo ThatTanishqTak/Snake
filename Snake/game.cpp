@@ -7,6 +7,7 @@ Game::Game()
 	initScreen();
 
 	play_obj = new Player();
+	coin_obj = new Coins();
 }
 
 Game::~Game()
@@ -43,6 +44,7 @@ void Game::initScreen()
 void Game::update()
 {
 	play_obj->update();
+	coin_obj->update();
 }
 
 void Game::render()
@@ -51,6 +53,7 @@ void Game::render()
 	ClearBackground(BLACK);
 
 	play_obj->render();
+	coin_obj->render();
 
 	EndDrawing();
 }
@@ -58,6 +61,7 @@ void Game::render()
 void Game::unload()
 {
 	delete play_obj;
+	delete coin_obj;
 
 	CloseWindow();
 }
