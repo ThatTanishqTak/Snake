@@ -4,9 +4,6 @@
 #include "player.h"
 #include "coins.h"
 
-class Player;
-class Coins;
-
 class Game
 {
 public:

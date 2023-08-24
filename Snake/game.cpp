@@ -6,8 +6,8 @@ Game::Game()
 	initVariables();
 	initScreen();
 
-	play_obj = new Player();
 	coin_obj = new Coins();
+	play_obj = new Player();
 }
 
 Game::~Game()
@@ -43,8 +43,8 @@ void Game::initScreen()
 
 void Game::update()
 {
-	play_obj->update();
 	coin_obj->update();
+	play_obj->update();
 }
 
 void Game::render()
@@ -60,8 +60,8 @@ void Game::render()
 
 void Game::unload()
 {
-	delete play_obj;
 	delete coin_obj;
+	delete play_obj;
 
 	CloseWindow();
 }
