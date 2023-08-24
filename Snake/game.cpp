@@ -52,8 +52,8 @@ void Game::render()
 	BeginDrawing();
 	ClearBackground(BLACK);
 
-	play_obj->render();
 	coin_obj->render();
+	play_obj->render();
 
 	EndDrawing();
 }

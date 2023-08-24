@@ -15,7 +15,7 @@ public:
 	void update();
 	void render();
 	
-	bool isAlive;
+	bool isAlive, collision;
 
 	Rectangle player;
 

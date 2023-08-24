@@ -11,6 +11,9 @@ public:
 	void update();
 	void render();
 
+	float radius;
+	Vector2 circleCenter;
+
 private:
 	void initVariables();
 	void initTextures();

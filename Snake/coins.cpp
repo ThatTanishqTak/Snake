@@ -13,17 +13,18 @@ Coins::~Coins()
 
 void Coins::update()
 {
-
+	circleCenter.y += 50.0f * GetFrameTime();
 }
 
 void Coins::render()
 {
-	DrawCircle(100, 200, 10.0f, BLUE);
+	DrawCircleV(circleCenter, radius, BLUE);
 }
 
 void Coins::initVariables()
 {
-
+	radius = 10.0f;
+	circleCenter = { 100.0f, 200.0f };
 }
 
 void Coins::initTextures()

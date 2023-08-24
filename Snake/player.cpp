@@ -28,7 +28,12 @@ void Player::update()
 	if (playerPos.x + player.width >= 1080) { isAlive = false; }
 	if (playerPos.y + player.height >= 720) { isAlive = false; }
 
-	CheckCollisionCircleRec({ 100, 200 }, 10.0f, player);
+	collision = CheckCollisionCircleRec(coin_ply_obj->circleCenter, coin_ply_obj->radius, player);
+
+	if (collision)
+	{
+		player.width += 30.0f;
+	}
 }
 
 void Player::render()
