@@ -21,11 +21,21 @@ void Player::update()
 		playerPos.x -= playerSpeed.x * GetFrameTime();
 	if (IsKeyDown(KEY_D))
 		playerPos.x += playerSpeed.x * GetFrameTime();
+
+	if (playerPos.x <= 0)
+		playerPos.x = 0;
+	if (playerPos.x + player.width >= 1080)
+		playerPos.x = 1080 - player.width;
+	if (playerPos.y <= 0)
+		playerPos.y = 0;
+	if (playerPos.y + player.height >= 720)
+		playerPos.y = 720 - player.height;
 }
 
 void Player::render()
 {
-	DrawRectangle(player.x, player.y,  player.width, player.height, GREEN);
+	DrawRectangle(static_cast<int>(playerPos.x), static_cast<int>(playerPos.y), 
+				  static_cast<int>(player.width), static_cast<int>(player.height), GREEN);
 }
 
 void Player::initTextures()
@@ -36,7 +46,7 @@ void Player::initTextures()
 void Player::initVariables()
 {
 	playerPos = { 540.0f, 360.0f };
-	playerSpeed = { 100.0f, 100.0f };
+	playerSpeed = { 250.0f, 250.0f };
 }
 
 void Player::unload()
