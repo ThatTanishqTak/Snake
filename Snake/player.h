@@ -2,9 +2,6 @@
 
 #include <iostream>
 #include "raylib.h"
-#include "coins.h"
-
-class Coins;
 
 class Player
 {
@@ -20,8 +17,6 @@ public:
 	Rectangle player;
 
 private:
-	Coins* coin_ply_obj;
-
 	void initTextures();
 	void initVariables();
 

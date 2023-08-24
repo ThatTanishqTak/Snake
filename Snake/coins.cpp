@@ -13,7 +13,7 @@ Coins::~Coins()
 
 void Coins::update()
 {
-	circleCenter.y += 50.0f * GetFrameTime();
+	
 }
 
 void Coins::render()
