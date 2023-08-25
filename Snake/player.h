@@ -24,6 +24,8 @@ private:
 	void initTextures();
 	void initVariables();
 
+	bool checkCollision();
+
 	int score;
 
 	Vector2 playerPos, playerSpeed;

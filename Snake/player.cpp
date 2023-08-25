@@ -24,6 +24,9 @@ void Player::update()
 	}
 
 	if (playerPos.x <= 0 || playerPos.y <= 0 || playerPos.x + player.width >= 1080 || playerPos.y + player.height >= 720) { isAlive = false; }
+
+	if (checkCollision()) { score++; }
+
 }
 
 void Player::render()
@@ -48,6 +51,12 @@ void Player::initVariables()
 	playerPos = { 540.0f, 360.0f };
 	playerSpeed = { 250.0f, 250.0f };
 	player = { playerPos.x, playerPos.y, 30.0f, 30.0f };
+}
+
+bool Player::checkCollision()
+{
+	if(playerPos.x == coin_obj->circleCenter.x && playerPos.y == coin_obj->circleCenter.y)
+		return true;
 }
 
 void Player::unload()
