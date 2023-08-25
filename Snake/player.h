@@ -1,7 +1,9 @@
 #pragma once
 
 #include <iostream>
+#include <string>
 #include "raylib.h"
+#include "coins.h"
 
 class Player
 {
@@ -17,8 +19,12 @@ public:
 	Rectangle player;
 
 private:
+	Coins* coin_obj;
+
 	void initTextures();
 	void initVariables();
+
+	int score;
 
 	Vector2 playerPos, playerSpeed;
 
