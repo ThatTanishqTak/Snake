@@ -33,7 +33,8 @@ void Player::render()
 {
 	if (!isAlive) { DrawText("GAME OVER!", 450, 360, 30, RED); }
 	
-	DrawRectangle(static_cast<int>(playerPos.x), static_cast<int>(playerPos.y), static_cast<int>(player.width), static_cast<int>(player.height), GREEN);
+	DrawRectangle(static_cast<int>(playerPos.x), static_cast<int>(playerPos.y), 
+				static_cast<int>(player.width), static_cast<int>(player.height), GREEN);
 	
 	DrawText(("Score: " + std::to_string(score)).c_str(), 0, 0, 24, RED);
 }
